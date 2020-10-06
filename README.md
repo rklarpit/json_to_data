@@ -4,8 +4,8 @@
 The product management team have agreed to ingest this new payload. The desire is to have all the data stored and queryable via our business intelligence tool.
 
 ## Deliverables
-* Automated database table creation based on JSON file
-* Interpret datatypes based on each attributes in JSON file
+* Automated database table creation based on [JSON file](https://github.com/great-jones/json_to_data/blob/main/sample.json)
+* Interpret datatypes based on each attributes in [JSON file](https://github.com/great-jones/json_to_data/blob/main/sample.json)
 * Sample queries that BI team can use to build their analytics
 
 ## Requirements
