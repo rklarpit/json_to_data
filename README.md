@@ -6,6 +6,7 @@ The product management team have agreed to ingest this new payload. The desire i
 ## Deliverables
 * Automated database table creation based on [JSON file](https://github.com/great-jones/json_to_data/blob/main/sample.json)
 * Interpret datatypes based on each attributes in [JSON file](https://github.com/great-jones/json_to_data/blob/main/sample.json)
+* Create new tables if the payload changes
 * Sample queries that BI team can use to build their analytics
 
 ## Requirements
