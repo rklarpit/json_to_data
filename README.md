@@ -11,8 +11,8 @@ The product management team have agreed to ingest this new payload. The desire i
 
 ## Requirements
 * Any programming language may be used
-* Utilize [Serverless Framework](https://www.serverless.com/)
 * Database engine is Postgres v11.8 or newer
+* Utilize [Serverless Framework](https://www.serverless.com/) (Nice to have, not required)
 
 ## Timeline and Objective
 This evaluation is intended to evaluate what you can accomplish within a two hour timeframe. The goal is to get a sense on how you would achieve the desired deliverables in the given amount of time. If you do not complete the solution, this does not indicate failure.
@@ -23,5 +23,6 @@ This evaluation is intended to evaluate what you can accomplish within a two hou
 * **Have Fun**
 
 ## Completion
-* Create a pull request when you have either elapsed two hours or have a complete solution, whichever comes first.
-* Email your contact from Great Jones that your pull request has been created.
+* Clone this branch to a repository that is accessible to Great Jones
+* When you have either elapsed two hours or have a complete solution, whichever comes first, Stop!
+* Email your contact from Great Jones that your solution is ready and where the solution can be obtained.
