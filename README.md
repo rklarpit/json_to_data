@@ -1,8 +1,20 @@
 # JSON to Data
-
 ## Problem
 The product management team have agreed to ingest this new payload. The desire is to have all the data stored and queryable via our business intelligence tool.
 
+## Solution
+There are 4 folders, organized in an ideal programming scenario.
+1. Handler will consist of the serverless function that will execute when the API is triggered
+2. Services folder has the service file which will have various python functions aiding in creating and loading data into newer tables(if already not created)
+3. Tools folder has the DBtools class that will be used to connect to a given database and execute queries against either
+4. Others It has a file consisting of few BI specific dynamic queries
+5. I have provided a jupyter notebook which can elaborate about the various functions used in the services file.
+6. template yaml is a pseudo version of the template to be used for the framework. Note it is a version for SAM template and not serverless
+
+The sample queries would need deeper understanding of the relation of tables, how to establish them.
+There could be alot of BI done on the given problem but to limit myself to the time provided I have provided 2 simple SQL queried for 2 problems I could think of
+
+# Other parts of Readme as per the problem set:-
 ## Deliverables
 * Automated database table creation based on [JSON file](https://github.com/great-jones/json_to_data/blob/main/sample.json)
 * Interpret datatypes based on each attributes in [JSON file](https://github.com/great-jones/json_to_data/blob/main/sample.json)
