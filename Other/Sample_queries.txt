@@ -1,0 +1,73 @@
+Q1. Which project managers have max_cost greater than 1000 from their tenants and how to contact them
+
+SELECT
+    o.tenant_id,
+    o.max_cost,
+    pm.name,
+    c.method,
+    c.value
+FROM
+    object o
+INNER JOIN
+    pm
+ON
+    o.pm_id = pm.user_id
+INNER JOIN
+    contacts c
+ON
+    pm.user_id = c.user_id
+WHERE
+    o.max_cost > 1000
+
+
+Q2. Which properties are using are using stripe method as payments and how many tenants do they have.
+How would you contact these property managers and what are the companies involved
+
+SELECT
+    a.property_id,
+    a.address1 as property_address_1,
+    a.address2 as property_address_2,
+    a.city as property_city,
+    a.state as property_state,
+    a.zip as property_zip,
+    b.user_id as property_manager_id,
+    c.method as communication_method,
+    c.value as communication_value,
+    d.company_id,
+    d.name as company_name,
+    d.address1 as company_address_1,
+    d.address2 as company_address_2,
+    d.city as company_city,
+    d.state as company_state,
+    d.zip as company_zip
+    count(tenant_id) as number_of_tenants
+FROM
+    property a
+INNER JOIN
+    pm b
+ON
+    o.pm_id = pm.user_id
+INNER JOIN
+        contacts c
+ON
+    pm.user_id = c.user_id
+INNER JOIN
+     company d
+ON
+    b.user_id = d.primary_user_id
+INNER JOIN
+    settings e
+ON
+    d.company_id = e.pm_company_id
+INNER JOIN
+    payment_method f
+ON
+    e.lcn_payment_method_id = f.payment_method_id
+AND
+    f.processor = 'Stripe'
+INNER JOIN
+    object g
+ON
+    a.property_id = g.property_id
+GROUP BY
+    1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16

@@ -1,0 +1,16 @@
+  JsonToData:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      FunctionName: !Sub "GJ-jsontodata-Lambda"
+      Handler: api/handlers/saveprofile.handler
+      Description: "The application invokes a POST request to json to data with given body"
+      Environment:
+        Variables:
+          COMPONENT_NAME: JsontoData
+      Events:
+        JsontoData:
+          Type: Api
+          Properties:
+            RestApiId: !Ref GJApi
+            Path: /GJ/jsontodata
+            Method: POST
